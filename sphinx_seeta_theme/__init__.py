@@ -21,6 +21,8 @@ from sphinx.util.docfields import GroupedField
 from sphinx.util.docfields import TypedField
 from sphinx.writers.html import HTMLTranslator
 
+from sphinx_seeta_theme.version import version as __version__
+
 
 class HTMLTranslatorV2(HTMLTranslator):
     """Custom html translator."""
