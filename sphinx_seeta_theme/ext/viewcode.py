@@ -134,7 +134,10 @@ def env_merge_info(app, env, docnames, other):
         if k not in env_modules:
             env_modules[k] = v
         else:
-            env_modules[k][2].update(other_modules[k][2])
+            try:
+                env_modules[k][2].update(other_modules[k][2])
+            except TypeError:
+                pass
 
 
 def missing_reference(app, env, node, contnode):
